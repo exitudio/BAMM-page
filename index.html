@@ -199,6 +199,136 @@
         </div>
       </div> -->
       <!-- <section class="py-5 text-center container"><div class="row py-lg-5"><div class="col-lg-8 col-md-8 mx-auto"><h1>BAMM: Bidirectional Autoregressive Motion Model</h1><h5>Anonymous</h5></div></div></section> -->
+      
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-8 col-md-8 mx-auto">
+            <h1>Length Diversity</h1>
+          </div>
+        </div>
+      </section>
+      <div class="album py-5 bg-body-tertiary">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <!-- <h3>Length Diversity</h3> -->
+              <h6>Given a text prompt, BAMM generates diverse motion sequences along with diverse sequence lengths. MoMask and MMM face challenges to generate motion with the sequence length that is different from the ground-truth length . </h6>
+              <strong>Text prompt : <span style='color:#255F83;'>“the person crouches and walks forward.”</span> (ground truth length: 196 frames). </strong>
+              <ul>
+                <li>
+                  <b>BAMM:</b> Realistic, diverse crouch-walk sequences; superior in motion fidelity.
+                </li>
+                <li>
+                  <b>MMM:</b> Sensitive to length variations; misses crouching, struggles with order.
+                </li>
+                <li>
+                  <b>MoMask:</b> Lacks walking and crouching; limited in motion diversity.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <h4 class="mt-4">196 Frame Sequences (Ground Truth)</h4>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2 justify-content-center">
+            <div class="col">
+              <div class="card shadow-sm">
+                <video id="inbtween_mmm" autoplay controls muted loop playsinline height="100%">
+                  <source src="./assets/diversity_length/BAMM/196/crouch_walk_together_196.mp4" type="video/mp4">
+                </video>
+                <div class="card-body mmm-card">
+                  <p class="card-text">BAMM (our)</p>
+                  <!-- <p>More crouches in motion</p> -->
+                  <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-body-secondary">(More crouches in realistic motion)</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Section for 184 frames -->
+          <h4 class="mt-4">184 Frame Sequences</h4>
+          <div class="row row-cols-1 row-cols-sm-3 row-cols-md-3 g-2">
+            <div class="col">
+              <div class="card shadow-sm">
+                <video id="bj" autoplay controls muted loop playsinline height="100%">
+                  <source src="./assets/diversity_length/BAMM/184/BAMM_crouch_then_walk_184_video.mp4" type="video/mp4">
+                </video>
+                <div class="card-body mmm-card">
+                  <h6 class="card-text">BAMM</h6>
+                  <!-- <p>performing crouches then walks, showcasing more realistic motion.</p> -->
+                  <small class="text-body-secondary">(performing crouches then walks, showcasing more realistic motion.)</small>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <video id="dance" autoplay controls muted loop playsinline height="100%">
+                  <source src="./assets/diversity_length/MoMask/184/MoMask_crouch_walk_together_184_video.mp4" type="video/mp4">
+                </video>
+                <div class="card-body">
+                  <h6 class="card-text">MoMask</h6>
+                  <small class="text-body-secondary">(lacks crouching motion in the overall sequence.)</small>
+                  <!-- <p>lacks crouching motion in the overall sequence.</p> -->
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <video id="forward-lean" autoplay controls muted loop playsinline height="100%">
+                  <source src="./assets/diversity_length/MMM/184/MMM_crouch_walk_together_184_video.mp4" type="video/mp4">
+                </video>
+                <div class="card-body">
+                  <h6 class="card-text">MMM</h6>
+                  <small class="text-body-secondary">(no walking motion present in the sequence.)</small>
+                  <!-- <p>no walking motion present in the sequence.</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Section for 156 frames -->
+          <h4 class="mt-4">156 Frame Sequences</h4>
+          <div class="row row-cols-1 row-cols-sm-3 row-cols-md-3 g-2" style="margin-top: 20px">
+            <div class="col">
+              <div class="card shadow-sm">
+                <video id="dance" autoplay controls muted loop playsinline height="100%">
+                  <source src="./assets/diversity_length/BAMM/156/BAMM_crouch_walk_together_156_video.mp4" type="video/mp4">
+                </video>
+                <div class="card-body mmm-card">
+                  <h6 class="card-text">BAMM</h6>
+                  <small class="text-body-secondary">(a crouch followed by more pronounced walking.)</small>
+                  <!-- <p>a crouch followed by more pronounced walking.</p> -->
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <video id="dance" autoplay controls muted loop playsinline height="100%">
+                  <source src="./assets/diversity_length/MoMask/156/MoMask_crouch_walk_together_156_video.mp4" type="video/mp4">
+                </video>
+                <div class="card-body">
+                  <h6 class="card-text">MoMask</h6>
+                  <small class="text-body-secondary">(motion sequence is reversed: starts with walking then crouches.)</small>
+                  <!-- <p>motion sequence is reversed: starts with walking then crouches.</p> -->
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <video id="dance" autoplay controls muted loop playsinline height="100%">
+                  <source src="./assets/diversity_length/MMM/156/MMM_crouch_walk_together_156_video.mp4" type="video/mp4">
+                </video>
+                <div class="card-body">
+                  <h6 class="card-text">MMM</h6>
+                  <small class="text-body-secondary">(lacks any crouching motion in the sequence.)</small>
+                  <!-- <p>lacks any crouching motion in the sequence.</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	    
+	    
+	    
       <section class="py-5 text-center container">
         <div class="row py-lg-5">
           <div class="col-lg-8 col-md-8 mx-auto">
@@ -493,132 +623,6 @@
                                 'A person punches as if they are boxing.', 'A person is stumbling while walking', 'A person is running forward in a long line.'
                                 <span style='color:#660000'>Blue frames indicate the generated short motion sequences.</span><span style='color:#255F83'>Red frames indicate transition frames.</span></h6></div></div><div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2 justify-content-center"><div class="col"><div class="card shadow-sm"><video id="inbtween_mmm" autoplay controls muted loop playsinline height="100%"><source src="./assets/longrange/longrange.mp4" type="video/mp4"></video><div class="card-body mmm-card"><p class="card-text">BAMM (our)</p><div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">(Realistic Motion)</small></div></div></div></div> -->
               <!-- <div class="col"><div class="card shadow-sm"><video id="inbtween_mdm" autoplay controls muted loop playsinline height="100%"><source src="./assets/in_between_mdm2.mp4" type="video/mp4"></video><div class="card-body"><p class="card-text">MDM</p><div class="d-flex justify-content-between align-items-center"><small class="text-body-secondary">(Not jump)</small></div></div></div></div> -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <section class="py-5 text-center container">
-        <div class="row py-lg-5">
-          <div class="col-lg-8 col-md-8 mx-auto">
-            <h1>Length Diversity</h1>
-          </div>
-        </div>
-      </section>
-      <div class="album py-5 bg-body-tertiary">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <!-- <h3>Length Diversity</h3> -->
-              <h6>Given a text prompt, BAMM generates diverse motion sequences along with diverse sequence lengths. MoMask and MMM face challenges to generate motion with the sequence length that is different from the ground-truth length . </h6>
-              <strong>Text prompt : <span style='color:#255F83;'>“the person crouches and walks forward.”</span> (ground truth length: 196 frames). </strong>
-              <ul>
-                <li>
-                  <b>BAMM:</b> Realistic, diverse crouch-walk sequences; superior in motion fidelity.
-                </li>
-                <li>
-                  <b>MMM:</b> Sensitive to length variations; misses crouching, struggles with order.
-                </li>
-                <li>
-                  <b>MoMask:</b> Lacks walking and crouching; limited in motion diversity.
-                </li>
-              </ul>
-            </div>
-          </div>
-          <h4 class="mt-4">196 Frame Sequences (Ground Truth)</h4>
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2 justify-content-center">
-            <div class="col">
-              <div class="card shadow-sm">
-                <video id="inbtween_mmm" autoplay controls muted loop playsinline height="100%">
-                  <source src="./assets/diversity_length/BAMM/196/crouch_walk_together_196.mp4" type="video/mp4">
-                </video>
-                <div class="card-body mmm-card">
-                  <p class="card-text">BAMM (our)</p>
-                  <!-- <p>More crouches in motion</p> -->
-                  <div class="d-flex justify-content-between align-items-center">
-                    <small class="text-body-secondary">(More crouches in realistic motion)</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Section for 184 frames -->
-          <h4 class="mt-4">184 Frame Sequences</h4>
-          <div class="row row-cols-1 row-cols-sm-3 row-cols-md-3 g-2">
-            <div class="col">
-              <div class="card shadow-sm">
-                <video id="bj" autoplay controls muted loop playsinline height="100%">
-                  <source src="./assets/diversity_length/BAMM/184/BAMM_crouch_then_walk_184_video.mp4" type="video/mp4">
-                </video>
-                <div class="card-body mmm-card">
-                  <h6 class="card-text">BAMM</h6>
-                  <!-- <p>performing crouches then walks, showcasing more realistic motion.</p> -->
-                  <small class="text-body-secondary">(performing crouches then walks, showcasing more realistic motion.)</small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <video id="dance" autoplay controls muted loop playsinline height="100%">
-                  <source src="./assets/diversity_length/MoMask/184/MoMask_crouch_walk_together_184_video.mp4" type="video/mp4">
-                </video>
-                <div class="card-body">
-                  <h6 class="card-text">MoMask</h6>
-                  <small class="text-body-secondary">(lacks crouching motion in the overall sequence.)</small>
-                  <!-- <p>lacks crouching motion in the overall sequence.</p> -->
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <video id="forward-lean" autoplay controls muted loop playsinline height="100%">
-                  <source src="./assets/diversity_length/MMM/184/MMM_crouch_walk_together_184_video.mp4" type="video/mp4">
-                </video>
-                <div class="card-body">
-                  <h6 class="card-text">MMM</h6>
-                  <small class="text-body-secondary">(no walking motion present in the sequence.)</small>
-                  <!-- <p>no walking motion present in the sequence.</p> -->
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Section for 156 frames -->
-          <h4 class="mt-4">156 Frame Sequences</h4>
-          <div class="row row-cols-1 row-cols-sm-3 row-cols-md-3 g-2" style="margin-top: 20px">
-            <div class="col">
-              <div class="card shadow-sm">
-                <video id="dance" autoplay controls muted loop playsinline height="100%">
-                  <source src="./assets/diversity_length/BAMM/156/BAMM_crouch_walk_together_156_video.mp4" type="video/mp4">
-                </video>
-                <div class="card-body mmm-card">
-                  <h6 class="card-text">BAMM</h6>
-                  <small class="text-body-secondary">(a crouch followed by more pronounced walking.)</small>
-                  <!-- <p>a crouch followed by more pronounced walking.</p> -->
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <video id="dance" autoplay controls muted loop playsinline height="100%">
-                  <source src="./assets/diversity_length/MoMask/156/MoMask_crouch_walk_together_156_video.mp4" type="video/mp4">
-                </video>
-                <div class="card-body">
-                  <h6 class="card-text">MoMask</h6>
-                  <small class="text-body-secondary">(motion sequence is reversed: starts with walking then crouches.)</small>
-                  <!-- <p>motion sequence is reversed: starts with walking then crouches.</p> -->
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <video id="dance" autoplay controls muted loop playsinline height="100%">
-                  <source src="./assets/diversity_length/MMM/156/MMM_crouch_walk_together_156_video.mp4" type="video/mp4">
-                </video>
-                <div class="card-body">
-                  <h6 class="card-text">MMM</h6>
-                  <small class="text-body-secondary">(lacks any crouching motion in the sequence.)</small>
-                  <!-- <p>lacks any crouching motion in the sequence.</p> -->
-                </div>
-              </div>
             </div>
           </div>
         </div>
