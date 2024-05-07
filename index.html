@@ -195,6 +195,31 @@
           </div>
         </div>
       </div>
+
+      
+     <div class="album py-5">
+      <div class="container">
+        <h3>Overall architecture of BAMM</h3>
+        
+        (a) Motion Tokenizer encodes the raw
+        motion sequence into discrete motion tokens according to a learned codebook. (b)
+        Masked Self-attention Transformer learns to sequentially predict next tokens conditioned on text embedding from CLIP model and future unmasked tokens. Masked
+        self-attention mechanism unifies autoregressive model and generative masked motion
+        via bidirectional and unidirectional causal masks.
+
+        <img src="./assets/architecture.png.jpg" class="img-fluid" alt="Responsive image">
+
+        Inference: Dual-iteration Cascaded Motion Decoding. In the first iteration,
+autoregressive decoding is applied by adopting unidirectional causal mask to generate
+coarse-grained motion and predict motion sequence length. In the second iteration,
+bidirectional autoregressive decoding is performed via bidirectional causal mask to
+removing and repredicting low-confidence motion tokens autoregressively.
+
+<img src="./assets/inference.jpg" class="img-fluid" alt="Responsive image">
+        
+        </div>
+      </div>
+    </div>
 	    
       <div class="album py-5">
         <div class="container">
