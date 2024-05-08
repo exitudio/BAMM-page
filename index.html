@@ -187,6 +187,20 @@
         </div>
       </div> -->
 
+	    
+      <div class="album py-5">
+        <div class="container">
+          <h3>High-quality Motion Generation, Enhanced Usability and Built-in Motion Editability </h3>
+          <!-- Our MMM achieves the highest quality with a FID score of 0.089 and the fastest performance, averaging
+                0.081 seconds for Average Inference Time per Sentence (AITS), when compared to state-of-the-art (SOTA)
+                methods on the HumanML3D dataset, while preserving editability. The model closer to the origin is
+                better. All tests are performed on a single NVIDIA RTX A5000. --> Performance comparison with SOTA methods. The low FID score means high overall quality of the generated motion, ensuring that its authenticity and naturalness is close to the real human movements. High R-precision (Top-1) and low MM-dist means accurate alignment between the generated motion and the text prompts. "Predict Length" denotes the ability to generate motion without prior knowledge of motion length. "Input Length" refers to the ability to take input length as a constraint. "Edit" indicates motion editability. MMM and MoMask require ground-truth motion length as input. Thus, the predicted motion length from the pretrained text-to-length estimator is adopted. <div class="d-flex justify-content-center">
+            <!-- <img src="./assets/speed_all.jpg" class="img-fluid" alt="Responsive image" width="500"> -->
+            <img src="./assets/images/table.png" class="img-fluid" alt="Responsive image" width="1000">
+          </div>
+        </div>
+      </div>
+
      <div class="album py-5">
         <div class="container">
           <h3>Contribution: Generating motion from text without requiring prior knowledge of the motion length while maintaining editability</h3>
@@ -221,18 +235,6 @@ removing and repredicting low-confidence motion tokens autoregressively.
       </div>
     </div>
 	    
-      <div class="album py-5">
-        <div class="container">
-          <h3>High-quality Motion Generation, Enhanced Usability and Built-in Motion Editability </h3>
-          <!-- Our MMM achieves the highest quality with a FID score of 0.089 and the fastest performance, averaging
-                0.081 seconds for Average Inference Time per Sentence (AITS), when compared to state-of-the-art (SOTA)
-                methods on the HumanML3D dataset, while preserving editability. The model closer to the origin is
-                better. All tests are performed on a single NVIDIA RTX A5000. --> Performance comparison with SOTA methods. The low FID score means high overall quality of the generated motion, ensuring that its authenticity and naturalness is close to the real human movements. High R-precision (Top-1) and low MM-dist means accurate alignment between the generated motion and the text prompts. "Predict Length" denotes the ability to generate motion without prior knowledge of motion length. "Input Length" refers to the ability to take input length as a constraint. "Edit" indicates motion editability. MMM and MoMask require ground-truth motion length as input. Thus, the predicted motion length from the pretrained text-to-length estimator is adopted. <div class="d-flex justify-content-center">
-            <!-- <img src="./assets/speed_all.jpg" class="img-fluid" alt="Responsive image" width="500"> -->
-            <img src="./assets/images/table.png" class="img-fluid" alt="Responsive image" width="1000">
-          </div>
-        </div>
-      </div>
       <!-- <div class="album py-5 bg-body-tertiary">
         <div class="container">
           <h3>Overall architecture of MMM</h3>
